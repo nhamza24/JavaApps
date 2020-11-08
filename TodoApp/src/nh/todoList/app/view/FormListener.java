@@ -1,4 +1,4 @@
-package nh.todoList.test.app.view;
+package nh.todoList.app.view;
 import java.util.EventListener;
 
 public interface FormListener extends EventListener {

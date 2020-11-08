@@ -1,4 +1,4 @@
-package nh.todoList.test.app.model;
+package nh.todoList.app.model;
 
 import java.io.File;
 import java.io.FileInputStream;

@@ -1,4 +1,4 @@
-package nh.todoList.test.app.view;
+package nh.todoList.app.view;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -9,8 +9,8 @@ import java.util.stream.Collectors;
 
 import javax.swing.JFrame;
 
-import nh.todoList.test.app.controller.Controller;
-import nh.todoList.test.app.model.Task;
+import nh.todoList.app.controller.Controller;
+import nh.todoList.app.model.Task;
 
 @SuppressWarnings("serial")
 public class MainFrame extends JFrame implements RowSelectedListener,ChangeModeListner {

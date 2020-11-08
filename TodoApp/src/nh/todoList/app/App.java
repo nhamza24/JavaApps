@@ -1,7 +1,7 @@
-package nh.todoList.test.app;
+package nh.todoList.app;
 import javax.swing.SwingUtilities;
 
-import nh.todoList.test.app.view.MainFrame;
+import nh.todoList.app.view.MainFrame;
 
 
 public class App {

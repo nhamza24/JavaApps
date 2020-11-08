@@ -1,4 +1,4 @@
-package nh.todoList.test.app.view;
+package nh.todoList.app.view;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -16,7 +16,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
 
-import nh.todoList.test.app.model.Task;
+import nh.todoList.app.model.Task;
 
 public class TablePanel extends JPanel {
 	

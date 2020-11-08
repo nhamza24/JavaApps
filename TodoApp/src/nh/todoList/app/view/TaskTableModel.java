@@ -1,10 +1,10 @@
-package nh.todoList.test.app.view;
+package nh.todoList.app.view;
 
 import java.util.List;
 
 import javax.swing.table.AbstractTableModel;
 
-import nh.todoList.test.app.model.Task;
+import nh.todoList.app.model.Task;
 
 public class TaskTableModel extends AbstractTableModel {
 	

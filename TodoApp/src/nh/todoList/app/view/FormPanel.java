@@ -1,4 +1,4 @@
-package nh.todoList.test.app.view;
+package nh.todoList.app.view;
 
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -22,7 +22,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.Border;
 
-import nh.todoList.test.app.model.Task;
+import nh.todoList.app.model.Task;
 
 @SuppressWarnings("serial")
 public class FormPanel extends JPanel {

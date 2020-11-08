@@ -1,6 +1,6 @@
-package nh.todoList.test.app.view;
+package nh.todoList.app.view;
 
-import nh.todoList.test.app.model.Task;
+import nh.todoList.app.model.Task;
 
 public interface RowSelectedListener {
 	void setSelectedRow(int row);
