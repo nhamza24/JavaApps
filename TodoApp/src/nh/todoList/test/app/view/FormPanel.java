@@ -24,7 +24,10 @@ import javax.swing.border.Border;
 
 import nh.todoList.test.app.model.Task;
 
+<<<<<<< HEAD
 @SuppressWarnings("serial")
+=======
+>>>>>>> branch 'master' of https://github.com/nhamza24/JavaApps.git
 public class FormPanel extends JPanel {
 
 	private JLabel descriptionLabel;
