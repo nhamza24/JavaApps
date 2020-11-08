@@ -25,7 +25,7 @@ public class MainFrame extends JFrame implements RowSelectedListener,ChangeModeL
 	private Controller controller;
 	private TablePanel tablePanel;
 	private boolean nochZuErldeigen=false;
-	private File file = new File("file.ser");
+	private File file = new File("tasks.ser");
 
 	public MainFrame() {
 		super("Todo List");

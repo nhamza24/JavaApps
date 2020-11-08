@@ -31,7 +31,7 @@ public class FormPanel extends JPanel {
 
 	private JTextField descriptionField;
 	private JButton addTaskBtn;
-	private JButton markDoneBtn;
+	private JButton showModebtn;
 	private FormListener formListener;
 	private int selectedRow;
 	private JCheckBox erledigtCheck;
@@ -41,7 +41,7 @@ public class FormPanel extends JPanel {
 
 	public FormPanel(ChangeModeListner nochzuErledigen) {
 		Dimension dim = getPreferredSize();
-		dim.width = 250;
+		dim.width = 350;
 		setPreferredSize(dim);
 
 		descriptionLabel = new JLabel("Description: ");
@@ -51,7 +51,7 @@ public class FormPanel extends JPanel {
 		erledigtCheck = new JCheckBox();
 		erledigtCheck.setEnabled(false);
 		addTaskBtn = new JButton("add Task");
-		markDoneBtn = new JButton("Mark as done");
+		showModebtn = new JButton("left/all");
 
 		// Set up mnemomics
 		addTaskBtn.setMnemonic(KeyEvent.VK_O);
@@ -82,7 +82,7 @@ public class FormPanel extends JPanel {
 			}
 		});
 
-		markDoneBtn.addActionListener(
+		showModebtn.addActionListener(
 				e -> {
 					this.nochZuErledigenmode = !nochZuErledigenmode;
 					nochzuErledigen.changeMode(nochZuErledigenmode);
@@ -116,7 +116,7 @@ public class FormPanel extends JPanel {
 
 		gc.gridx = 1;
 		gc.gridy = 0;
-		gc.insets = new Insets(0, 0, 0, 0);
+		gc.insets = new Insets(0, 0, 0, 5);
 		gc.anchor = GridBagConstraints.LINE_START;
 		add(descriptionField, gc);
 
@@ -139,27 +139,24 @@ public class FormPanel extends JPanel {
 
 		// //////////Next row ///////////////////////////////////
 
+	
+		
+		
 		gc.gridy++;
 
 		gc.weightx = 1;
 		gc.weighty = 2.0;
+		
+		gc.gridx = 0;
+		gc.insets = new Insets(0, 0, 0, 5);
+		gc.anchor = GridBagConstraints.FIRST_LINE_END;
+		add(showModebtn, gc);
 
 		gc.gridx = 1;
 		gc.anchor = GridBagConstraints.FIRST_LINE_START;
-		gc.insets = new Insets(0, 0, 0, 0);
+		gc.insets = new Insets(0, 0, 0, 5);
 		add(addTaskBtn, gc);
 
-		// //////////Next row ///////////////////////////////////
-
-		gc.gridy++;
-
-		gc.weightx = 1;
-		gc.weighty = 2.0;
-
-		gc.gridx = 1;
-		gc.anchor = GridBagConstraints.FIRST_LINE_START;
-		gc.insets = new Insets(0, 0, 0, 0);
-		add(markDoneBtn, gc);
 	}
 
 	public void setFormListener(FormListener listener) {
