@@ -63,7 +63,7 @@ public class MainFrame extends JFrame implements RowSelectedListener,ChangeModeL
 
 		
 		
-		setMinimumSize(new Dimension(500, 400));
+		setMinimumSize(new Dimension(700, 400));
 		setSize(600, 500);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);

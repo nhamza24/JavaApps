@@ -31,10 +31,7 @@ public class Controller {
 	}
 
 	public void setTaskDone(FormEvent ev) {
-		int index = ev.getSelectedRow();
-		db.getTasks().get(index).setErledigt(ev.isErledigt());
-
-	
+		
 	}
 
 	public void saveToFile(File file) throws IOException {

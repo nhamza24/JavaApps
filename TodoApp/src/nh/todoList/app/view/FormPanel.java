@@ -35,7 +35,7 @@ public class FormPanel extends JPanel {
 	private FormListener formListener;
 	private int selectedRow;
 	private JCheckBox erledigtCheck;
-	private ChangeModeListner nochzuErledigen;
+	private Task selectedTask=null;
 	private boolean nochZuErledigenmode = false;
 	JScrollPane scrollPane;
 
@@ -46,7 +46,7 @@ public class FormPanel extends JPanel {
 
 		descriptionLabel = new JLabel("Description: ");
 
-		descriptionField = new JTextField(10);
+		descriptionField = new JTextField(15);
 
 		erledigtCheck = new JCheckBox();
 		erledigtCheck.setEnabled(false);
@@ -55,16 +55,18 @@ public class FormPanel extends JPanel {
 
 		// Set up mnemomics
 		addTaskBtn.setMnemonic(KeyEvent.VK_O);
-		this.nochzuErledigen = nochzuErledigen;
 		erledigtCheck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// String name = nameField.getText();
-				String description = "";
+			 	String description = "";
 				boolean erledigt = erledigtCheck.isSelected();
-				FormEvent ev = new FormEvent(this, description, erledigt, selectedRow);
-				if (formListener != null) {
-					formListener.formEventOccurred(ev);
+				if (selectedTask!=null) {
+					selectedTask.setErledigt(erledigt);
 				}
+ 			FormEvent ev = new FormEvent(this, description, erledigt, selectedRow);
+ 				if (formListener != null) {
+ 				formListener.formEventOccurred(ev);
+ 			}
 
 			}
 		});
@@ -84,8 +86,8 @@ public class FormPanel extends JPanel {
 
 		showModebtn.addActionListener(
 				e -> {
-					this.nochZuErledigenmode = !nochZuErledigenmode;
-					nochzuErledigen.changeMode(nochZuErledigenmode);
+										nochzuErledigen.changeMode(nochZuErledigenmode);
+										this.nochZuErledigenmode = !nochZuErledigenmode;
 				});
 
 		Border innerBorder = BorderFactory.createTitledBorder("New Task");
@@ -174,6 +176,7 @@ public class FormPanel extends JPanel {
 
 	public void setSelectedTask(Task task) {
 		if (task != null) {
+			this.selectedTask=task;
 			descriptionField.setText(task.getDescription());
 			erledigtCheck.setSelected(task.isErledigt());
 			;
